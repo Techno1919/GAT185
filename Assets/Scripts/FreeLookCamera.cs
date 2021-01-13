@@ -41,7 +41,7 @@ public class FreeLookCamera : MonoBehaviour
 
         transform.position += (transform.rotation * translate) * speed * Time.deltaTime;
 
-        // raycast
+        /*// raycast
         Ray ray = new Ray(transform.position, transform.forward);
         if (Physics.Raycast(ray, out RaycastHit hitInfo))
         {
@@ -52,9 +52,9 @@ public class FreeLookCamera : MonoBehaviour
                 Destroy(hitInfo.collider.gameObject);
             }
 
-            /*hitMarker.transform.position = hitInfo.point;
-            Debug.Log(hitInfo.collider.gameObject);*/
-        }
+            *//*hitMarker.transform.position = hitInfo.point;
+            Debug.Log(hitInfo.collider.gameObject);*//*
+        }*/
 
     } 
 }
