@@ -2443,6 +2443,7 @@ GameObject:
   - component: {fileID: 8134428591526790932}
   - component: {fileID: 8134428591517247852}
   - component: {fileID: 3682955085808937241}
+  - component: {fileID: 3733657468042646415}
   - component: {fileID: 7851515867513490655}
   - component: {fileID: -90523941318988197}
   - component: {fileID: 9207683050889913897}
@@ -2501,6 +2502,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  weapons:
+  - {fileID: 3733657468042646415}
+--- !u!114 &3733657468042646415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8134428591526763316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49070a0d105da664dbba8a202eee668a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0.1
+  _bullet: {fileID: 4855078784735347929, guid: 1a22dbe76caa4fc4f93e9324ac4cd46d, type: 3}
 --- !u!136 &7851515867513490655
 CapsuleCollider:
   m_ObjectHideFlags: 0
