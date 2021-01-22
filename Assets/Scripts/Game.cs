@@ -40,7 +40,7 @@ public class Game : MonoBehaviour
                 break;
             case eState.StartGame:
                 titleScreen.SetActive(false);
-                timer = 10;
+                timer = 90;
                 Score = 0;
                 music.Play();
                 State = eState.Game;
