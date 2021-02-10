@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     public GameObject spawnGameObject;
     public float spawnTimeMin = 2;
     public float spawnTimeMax = 5;
+    public bool isSpawnChild = true;
 
     float spawnTimer;
 
@@ -19,7 +20,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.childCount == 0 && Game.Instance.State == Game.eState.Game)
+        if(transform.childCount == 0)// && Game.Instance.State == Game.eState.Game)
         {
             spawnTimer -= Time.deltaTime;
         }
@@ -27,7 +28,8 @@ public class Spawner : MonoBehaviour
         if(spawnTimer <= 0)
         {
             spawnTimer = Random.Range(spawnTimeMin, spawnTimeMax);
-            Instantiate(spawnGameObject, transform.position, transform.rotation, transform);
+            Transform parent = (isSpawnChild) ? transform : null;
+            Instantiate(spawnGameObject, transform.position, transform.rotation, parent);
         }
     }
 }
